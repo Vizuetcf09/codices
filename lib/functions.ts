@@ -31,8 +31,8 @@ const copyDirectory: CopyDirectoryTypes = async (src, dest) => {
 };
 
 // Uso de la función
-const sourceDir = "src";
-const destDir = "astro";
+const sourceDir = "codices";
+const destDir = "src";
 
 copyDirectory(sourceDir, destDir)
   .then(() => console.log("Directorio copiado exitosamente."))

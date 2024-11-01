@@ -1,7 +1,7 @@
 /dist
 /node_modules
 /.vscode
-/astro
+/src
 
 .env
 .DS_Store

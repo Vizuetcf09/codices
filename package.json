@@ -1,15 +1,17 @@
 {
-  "name": "codices_fw",
+  "name": "codices",
   "version": "0.0.1",
   "main": "src/dist/index.js",
   "module": "src/dist/index.mjs",
   "types": "src/dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/Vizuetcf09/codices-fw.git"
+  },
   "scripts": {
     "lib:build": "tsup",
     "lib:watch": "tsup --watch",
     "node": "node dist/index.js",
     "sass": "sass --watch src/scss:src/styles"
-
   },
   "keywords": [
     "sass",
