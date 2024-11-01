@@ -1,4 +1,5 @@
-// types.ts
-
 export type CallbackError = Error | null;
-export type CopyDirectoryFunction = (src: string, dest: string) => Promise<void>;
+export type CopyDirectoryTypes = (
+  src: string,
+  dest: string
+) => Promise<void>;

@@ -1,13 +1,41 @@
-import { copyFile, constants } from "node:fs";
-import { CallbackError } from "./types";
+import { promises as fs } from "node:fs";
+import * as path from "path";
+import { CallbackError, CopyDirectoryTypes } from "./types";
 
-function callback(err: CallbackError): void {
-  if (err) {
-    console.error("Error copying file:", err.message);
-    return; // Regresamos después de manejar el error
+// copyDirectory.ts
+
+// Función para copiar un directorio
+const copyDirectory: CopyDirectoryTypes = async (src, dest) => {
+  // Crea el directorio de destino si no existe
+  await fs.mkdir(dest, { recursive: true });
+
+  // Lee los contenidos del directorio de origen
+  const items = await fs.readdir(src);
+
+  // Copia cada elemento del directorio
+  for (const item of items) {
+    const srcPath = path.join(src, item);
+    const destPath = path.join(dest, item);
+
+    // Obtiene información sobre el elemento
+    const stat = await fs.stat(srcPath);
+
+    if (stat.isDirectory()) {
+      // Si el elemento es un directorio, copia recursivamente
+      await copyDirectory(srcPath, destPath);
+    } else {
+      // Si el elemento es un archivo, lo copia
+      await fs.copyFile(srcPath, destPath);
+    }
   }
-  console.log("index.astro was copied to destination.txt");
-}
+};
 
-// destination.txt will be created or overwritten by default.
-copyFile("./src/pages/index.astro", "./astro/index.astro", callback);
+// Uso de la función
+const sourceDir = "src";
+const destDir = "astro";
+
+copyDirectory(sourceDir, destDir)
+  .then(() => console.log("Directorio copiado exitosamente."))
+  .catch((err: CallbackError) =>
+    console.error("Error al copiar el directorio:", err)
+  );
