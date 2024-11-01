@@ -1,24 +1,13 @@
-import fs from "fs";
-import { FileReadCallback } from "./types";
+import { copyFile, constants } from "node:fs";
+import { CallbackError } from "./types";
 
-function readFile(
-  filePath: string,
-  encoding: BufferEncoding = "utf8"
-): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const callback: FileReadCallback = (err, data) => {
-      if (err) {
-        reject(err);
-        console.error(err);
-      } else {
-        resolve(data as string);
-        console.log(data);
-      }
-    };
-
-    fs.readFile(filePath, encoding, callback);
-  });
+function callback(err: CallbackError): void {
+  if (err) {
+    console.error("Error copying file:", err.message);
+    return; // Regresamos después de manejar el error
+  }
+  console.log("index.astro was copied to destination.txt");
 }
 
-// Uso de la función
-readFile("./src/pages/index.astro");
+// destination.txt will be created or overwritten by default.
+copyFile("./src/pages/index.astro", "./astro/index.astro", callback);

@@ -1,4 +1,4 @@
-export type FileReadCallback = (
-  err: NodeJS.ErrnoException | null,
-  data: string | undefined
-) => void;
+// types.ts
+
+export type CallbackError = Error | null;
+export type CopyDirectoryFunction = (src: string, dest: string) => Promise<void>;
