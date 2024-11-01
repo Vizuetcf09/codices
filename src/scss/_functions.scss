@@ -1,0 +1,18 @@
+/// functions.scss
+///
+@function font($key) {
+  @return map-get($font-family, $key);
+}
+///
+/// Spacers
+///
+@function space($key) {
+  @return map-get($spacers, $key);
+}
+///
+/// Conteiner Max Width
+/// 
+@function container-max-width($key) {
+  @return map-get($container-max-width, $key )
+}
+/// 

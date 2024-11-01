@@ -1,0 +1,47 @@
+///
+///  Container Flex
+///
+@mixin container-flex {
+  display: flex;
+  max-width: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+///
+///  Container Flex
+@mixin container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  max-width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+///  Mixin para las filas
+///
+@mixin flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+///
+///  Mixin para las columnas
+///
+@mixin flex-col($columns) {
+  grid-column: 0 0 percentage($columns / $grid-columns);
+  max-width: percentage($columns / $grid-columns);
+}
+///
+/// Grid conteiner
+///
+@mixin container-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 1fr 100px;
+  min-height: 100vh;
+  grid-template-areas:
+    "header header header"
+    "hero hero hero"
+    "footer footer footer";
+}
+///
+///  End mixins
+///
