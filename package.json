@@ -1,9 +1,9 @@
 {
   "name": "codices",
   "version": "0.0.1",
-  "main": "src/dist/index.js",
-  "module": "src/dist/index.mjs",
-  "types": "src/dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "repository": {
     "url": "https://github.com/Vizuetcf09/codices-fw.git"
   },
@@ -11,17 +11,16 @@
     "lib:build": "tsup",
     "lib:watch": "tsup --watch",
     "node": "node dist/index.js",
-    "sass": "sass --watch src/scss:src/styles"
+    "sass": "sass --watch codices/scss:codices/styles"
   },
   "keywords": [
     "sass",
     "css",
-    "framework",
-    "astro"
+    "framework"
   ],
   "author": "Vizuet Cruz Fernando Ivan",
   "license": "MIT",
-  "description": "Just a test package.",
+  "description": "Códices library package.",
   "devDependencies": {
     "@types/node": "^22.8.5",
     "tsup": "^8.3.5",

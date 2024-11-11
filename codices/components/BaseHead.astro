@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+// styles
+import "../styles/global.css";
+---
+
+<head>
+  <!-- Global Metadata -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg" href="/sj_logo.svg" sizes="32x32" />
+  <!-- Font Preload -->
+  <link
+    rel="preload"
+    href="/fonts/Sansation_Regular.ttf"
+    as="font"
+    type="font/ttf"
+    crossorigin
+  />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>
