@@ -10,8 +10,9 @@
     "declaration": true,
     "isolatedModules": true,
     "noEmit": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": "lib",
   },
-  "include": ["codices", "lib"],
+  "include": ["lib"],
   "exclude": ["node_modules", "src", "dist"]
 }

@@ -11,7 +11,8 @@
     "lib:build": "tsup",
     "lib:watch": "tsup --watch",
     "node": "node dist/index.js",
-    "sass": "sass --watch codices/scss:codices/styles"
+    "sass": "sass --watch codices/scss:codices/styles",
+    "scripts": "node dist/CLI/index.js"
   },
   "keywords": [
     "sass",
