@@ -1,11 +1,11 @@
 {
   "name": "codices",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "repository": {
-    "url": "https://github.com/Vizuetcf09/codices-fw.git"
+    "url": "https://github.com/Vizuetcf09/codices.git"
   },
   "scripts": {
     "lib:build": "tsup",
@@ -21,13 +21,12 @@
   ],
   "author": "Vizuet Cruz Fernando Ivan",
   "license": "MIT",
-  "description": "Códices library package.",
+  "description": "Códices, Sass Framework.",
   "devDependencies": {
     "@types/node": "^22.8.5",
+    "astro": "^4.16.12",
+    "find-up": "^7.0.0",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
-  },
-  "dependencies": {
-    "astro": "^4.16.7"
   }
 }

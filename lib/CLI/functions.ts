@@ -32,7 +32,7 @@ export function updateScripts(newScripts: Scripts): void {
         }
       );
     } catch (parseError) {
-      console.error("Error al parsear package.json:", parseError);
+      console.error("Error al parsear package.json:", parseError)
     }
   });
 }

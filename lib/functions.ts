@@ -1,11 +1,11 @@
 import { promises as fs } from "node:fs";
 import * as path from "path";
-import { CallbackError, CopyDirectoryTypes } from "./types";
+import { callbackError, copyDirectoryTypes } from "./types";
 
 // copyDirectory.ts
 
 // Función para copiar un directorio
-const copyDirectory: CopyDirectoryTypes = async (src, dest) => {
+const copyDirectory: copyDirectoryTypes = async (src, dest) => {
   // Crea el directorio de destino si no existe
   await fs.mkdir(dest, { recursive: true });
 
@@ -32,10 +32,10 @@ const copyDirectory: CopyDirectoryTypes = async (src, dest) => {
 
 // Uso de la función
 const sourceDir = "codices";
-const destDir = "../../src";
+const destDir = "../../../src";
 
 copyDirectory(sourceDir, destDir)
   .then(() => console.log("Directorio copiado exitosamente."))
-  .catch((err: CallbackError) =>
+  .catch((err: callbackError) =>
     console.error("Error al copiar el directorio:", err)
   );
