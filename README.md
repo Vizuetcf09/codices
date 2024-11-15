@@ -22,8 +22,16 @@ por separado.
 
 # Install Códices
 
+## Con npm
+
 ```bash
 npm install codices
+```
+
+## Con npm
+
+```bash
+pnpm install codices
 ```
 
 # Usage
