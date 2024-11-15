@@ -3,7 +3,7 @@
   "version": "0.1.10",
   "main": "./dist/index.js",
   "bin": {
-    "create-codices": "./dist/index.js"
+    "codices": "node dist/index.js"
   },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -13,9 +13,9 @@
     "directory": ""
   },
   "scripts": {
-    "lib:build": "tsup",
-    "lib:watch": "tsup --watch",
-    "node": "node dist/index.js",
+    "build": "tsup && npm pack",
+    "watch": "tsup --watch",
+    "codices": "node dist/index.js",
     "sass": "sass --watch codices/scss:codices/styles"
   },
   "keywords": [

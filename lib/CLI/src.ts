@@ -31,11 +31,11 @@ export const copyDirectory: copyDirectoryTypes = async (src, dest) => {
 };
 
 // Uso de la función
-const sourceDir = "codices";
-const destDir = "../../../src";
+const sourceDir = "node_modules/codices/codices";
+const destDir = "./src";
 
 copyDirectory(sourceDir, destDir)
-  .then(() => console.log("Directorio copiado exitosamente."))
+  .then(() => console.log("Directorio copiado exitosamente\n"))
   .catch((err: callbackError) =>
-    console.error("Error al copiar el directorio:", err)
+    console.error("Error al copiar el directorio:\n", err)
   );

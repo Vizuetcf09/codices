@@ -16,7 +16,7 @@ export async function intro(ctx: IntroContext): Promise<void> {
 // Ejemplo de contexto para probar la función
 const context: IntroContext = {
   skipWelcome: false,
-  welcome: "Lets Build Something Beutiful!",
+  welcome: "Lets Build Something Beutiful!\n",
 };
 
 // Llamada a la función de bienvenida
