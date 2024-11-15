@@ -5,7 +5,7 @@ import { callbackError, copyDirectoryTypes } from "./types";
 // copyDirectory.ts
 
 // Función para copiar un directorio
-const copyDirectory: copyDirectoryTypes = async (src, dest) => {
+export const copyDirectory: copyDirectoryTypes = async (src, dest) => {
   // Crea el directorio de destino si no existe
   await fs.mkdir(dest, { recursive: true });
 
