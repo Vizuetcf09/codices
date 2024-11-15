@@ -9,4 +9,4 @@ src/
 tsconfig.json
 tsup.config.ts
 
-codices-0.1.10.tgz/
+./codices-0.1.10.tgz
