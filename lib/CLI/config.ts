@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { Scripts } from "./types";
 import { newScripts } from "./scripts";
+import { Script } from "vm";
 
 // Ruta del archivo package.json del proyecto
 const packageJsonPath = path.join(process.cwd(), "package.json"); // Lee el package.json del proyecto actual
@@ -11,7 +12,7 @@ const packageJsonPath = path.join(process.cwd(), "package.json"); // Lee el pack
 export function updatePackageJson(newScripts: Scripts): void {
   fs.readFile("package.json", "utf8", (err, data) => {
     if (err) {
-      console.error("Error al leer package.json:\n", err);
+      console.error("Error reading package.json:\n", err);
       return;
     }
 
@@ -27,16 +28,14 @@ export function updatePackageJson(newScripts: Scripts): void {
         JSON.stringify(packageJson, null, 2),
         (writeErr) => {
           if (writeErr) {
-            console.error("Error al escribir en package.json:\n", writeErr);
+            console.error("Error writing in package.json:\n", writeErr);
           } else {
-            console.log(
-              `Nuevos scripts agregados a package.json:\n ${newScripts}`
-            );
+            console.log("Updated package.json");
           }
         }
       );
     } catch (parseError) {
-      console.error("Error al parsear package.json:\n", parseError);
+      console.error("Error parsing package.json:\n", parseError);
     }
   });
 }

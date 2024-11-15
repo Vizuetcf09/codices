@@ -35,7 +35,7 @@ const sourceDir = "node_modules/codices/codices";
 const destDir = "./src";
 
 copyDirectory(sourceDir, destDir)
-  .then(() => console.log("Directorio copiado exitosamente\n"))
+  .then(() => console.log("Directory copied successfully\n"))
   .catch((err: callbackError) =>
-    console.error("Error al copiar el directorio:\n", err)
+    console.error("Error copying directory:\n", err)
   );
