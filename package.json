@@ -1,9 +1,9 @@
 {
   "name": "codices",
-  "version": "0.1.9",
-  "main": "./dist/index.astro",
+  "version": "0.1.10",
+  "main": "./dist/index.js",
   "bin": {
-    "create-codices": "./dist/index.astro"
+    "create-codices": "./dist/index.js"
   },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
