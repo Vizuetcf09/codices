@@ -1,14 +1,18 @@
-// scriptUpdater.ts
+//
+// start-code
+//
+// node
+//
 import * as fs from "fs";
 import * as path from "path";
+// 
 import { Scripts } from "./types";
 import { newScripts } from "./scripts";
-import { Script } from "vm";
-
-// Ruta del archivo package.json del proyecto
-const packageJsonPath = path.join(process.cwd(), "package.json"); // Lee el package.json del proyecto actual
-
-// Función para leer y actualizar los scripts en package.json
+//
+const packageJsonPath = path.join(process.cwd(), "package.json");
+//
+// updatePac
+//
 export function updatePackageJson(newScripts: Scripts): void {
   fs.readFile("package.json", "utf8", (err, data) => {
     if (err) {
@@ -19,10 +23,8 @@ export function updatePackageJson(newScripts: Scripts): void {
     try {
       const packageJson = JSON.parse(data);
 
-      // Actualizar los scripts en el archivo JSON
       packageJson.scripts = { ...packageJson.scripts, ...newScripts };
 
-      // Escribir los cambios en el archivo
       fs.writeFile(
         packageJsonPath,
         JSON.stringify(packageJson, null, 2),
@@ -39,6 +41,10 @@ export function updatePackageJson(newScripts: Scripts): void {
     }
   });
 }
-
+//
+// Use updatePackageJson
+//
 updatePackageJson(newScripts);
-// console.log("Ruta calculada para package.json:", packageJsonPath);
+//
+// endcode
+//

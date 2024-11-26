@@ -1,41 +1,48 @@
+//
+// start-code
+//
+// node
+//
 import { promises as fs } from "node:fs";
 import * as path from "path";
-import { callbackError, copyDirectoryTypes } from "./types";
-
-// copyDirectory.ts
-
-// Función para copiar un directorio
+//
+// Types
+//
+import { copyDirectoryTypes } from "./types";
+//
+// copyDirectory function
+//
 export const copyDirectory: copyDirectoryTypes = async (src, dest) => {
-  // Crea el directorio de destino si no existe
   await fs.mkdir(dest, { recursive: true });
 
-  // Lee los contenidos del directorio de origen
   const items = await fs.readdir(src);
 
-  // Copia cada elemento del directorio
   for (const item of items) {
     const srcPath = path.join(src, item);
     const destPath = path.join(dest, item);
 
-    // Obtiene información sobre el elemento
     const stat = await fs.stat(srcPath);
 
     if (stat.isDirectory()) {
-      // Si el elemento es un directorio, copia recursivamente
       await copyDirectory(srcPath, destPath);
     } else {
-      // Si el elemento es un archivo, lo copia
       await fs.copyFile(srcPath, destPath);
     }
   }
 };
-
-// Uso de la función
+//
+// sourceDir and destDir
+//
 const sourceDir = "node_modules/codices/codices";
 const destDir = "./src";
-
+//
+// Use copuDirectory
+//
 copyDirectory(sourceDir, destDir)
   .then(() => console.log("Directory copied successfully\n"))
-  .catch((err: callbackError) =>
+  .catch((err: Error | null) =>
     console.error("Error copying directory:\n", err)
   );
+//
+// endcode
+//

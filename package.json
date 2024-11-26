@@ -1,6 +1,6 @@
 {
   "name": "codices",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "main": "./dist/index.js",
   "bin": {
     "codices": "node dist/index.js"
@@ -14,16 +14,14 @@
   },
   "scripts": {
     "build": "tsup && npm link",
-    "watch": "tsup --watch",
-    "codices": "node dist/index.js",
-    "sass": "sass --watch codices/scss:codices/styles"
+    "watch": "tsup --watch"
   },
   "keywords": [
     "sass",
     "css",
     "framework"
   ],
-  "author": "Vizuet Cruz Fernando Ivan",
+  "author": "Vizuet CF",
   "license": "MIT",
   "description": "Códices, Sass Framework.",
   "devDependencies": {
@@ -34,7 +32,7 @@
   },
   "files": [
     "dist",
-    "codices",
+    "src",
     "README.md",
     "package-lock.json",
     "package.json"
