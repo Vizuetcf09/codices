@@ -2,7 +2,7 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
   format: ["cjs", "esm"],
-  entry: ["libraries/index.ts", "libraries/CLI/index.ts"],
+  entry: ["src/libraries/index.ts", "src/libraries/CLI/index.ts"],
   dts: true,
   shims: true,
   skipNodeModulesBundle: true,

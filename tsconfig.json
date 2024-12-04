@@ -11,8 +11,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "dist",
-    "rootDir": "libraries"
+    "rootDir": "src/libraries"
   },
-  "include": ["libraries"],
-  "exclude": ["node_modules", "src", "dist"]
+  "include": ["src/libraries", "src/scss"],
+  "exclude": ["node_modules", "dist"]
 }

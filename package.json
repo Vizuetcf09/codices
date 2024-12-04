@@ -1,7 +1,7 @@
 {
   "name": "codices",
   "version": "0.1.16",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "bin": {
     "codices": "node dist/index.js"
   },
