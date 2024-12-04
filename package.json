@@ -3,8 +3,7 @@
   "version": "0.2.0",
   "main": "dist/index.js",
   "bin": {
-    "codices": "node dist/index.js",
-    "create-codices": "node dist/index.js"
+    "codices": "node dist/index.js"
   },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
