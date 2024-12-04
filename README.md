@@ -1,7 +1,5 @@
 # Códices
 
-**Generate CSS and HTML with a Sass Framework**.
-
 ## What is Códices?
 
 Codices es un framework de código abierto desarrollado con el motor de CSS de
