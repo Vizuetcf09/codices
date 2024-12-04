@@ -1,0 +1,96 @@
+/// Variables
+///
+/// Colores
+///
+$white-color: rgba(255, 255, 255, 100) !default;
+$black-color: rgba(0, 0, 0, 100) !default;
+
+// $background-color: $black-color !default;
+$background-color: rgba(5, 5, 5, 100) !default;
+
+$primary-color: rgb(234, 141, 255) !default;
+$secundary-color: rgb(145, 180, 255) !default;
+$tertiary-color: rgb(104, 228, 255) !default;
+$quaternary-color: rgb(255, 255, 255) !default;
+
+///
+/// Gradient colors
+///
+$gradient-start-color: rgba($black-color, 100) !default;
+$gradient-center-color: rgba($black-color, 60) !default;
+$gradient-end-color: $background-color !default;
+///
+/// Fonts
+///
+$roboto-font: "Roboto", sans-serif;
+///
+$sansation-font: "Sansation", sans-serif;
+$montserrat-semibold-font: "Montserrat", sans-serif;
+$roboto-regular-font: $roboto-font;
+$roboto-light-font: $roboto-font;
+$roboto-medium-font: $roboto-font;
+$lexant-zetta-regular-font: "Lexend Zetta", sans-serif;
+$league-spartan-regular-font: "League Spartan Regular", sans-serif;
+$abeezee-regular-font: "ABeeZee", sans-serif;
+
+///
+/// Fonts map
+$font-family-map: (
+  "alfa-slab-one": "Alfa Slab One",
+  "inter-tight": "Inter Tight",
+  "outfit": "Outfit",
+  "exo-2": "Exo 2",
+  "farro": "Farro",
+  "noto-sans-display": "Noto Sans Display",
+) !default;
+///
+/// Font colors
+///
+$primary-text-color: rgba(235, 235, 235, 100) !default;
+$secundary-text-color: rgba(200, 200, 200, 100) !default;
+///
+/// Font size
+$font-size: 16px;
+$menu-item-font-size: 16px;
+///
+/// Grids
+///
+/// Grid Breakpoints
+///
+$grid-breakpoints: (
+  0: 0,
+  1: 360px,
+  2: 430px,
+  3: 768px,
+  4: 820px,
+  5: 1024px,
+  6: 1280px,
+  7: 1440px,
+) !default;
+///
+/// Conteiner max widths
+///
+$container-max-widths: (
+  0: 100%,
+  1: 340px,
+  2: 410px,
+  3: 750px,
+  4: 800px,
+  5: 1000px,
+  6: 1260px,
+  7: 1420px,
+) !default;
+///
+///
+$grid-gutter-width: space(3) - 0.125 !default;
+$grid-row-columns: 6 !default;
+$grid-columns: 12 !default;
+
+$max-width: 100rem;
+
+$w-sm: 550px;
+$w-md: 750px;
+$w-lg: 1248px;
+$w-xl: 1688px;
+
+///

@@ -1,0 +1,12 @@
+@mixin background-image {
+  @include background-image-radial-gradient;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-attachment: fixed;
+
+  @include responsive-display(750px) {
+    background-position: top;
+  }
+}

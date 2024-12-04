@@ -1,9 +1,6 @@
 dist/
 node_modules/
 .vscode/
-src/
 
 .env
 .DS_Store
-
-codices-0.1.13.tgz

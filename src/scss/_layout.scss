@@ -1,0 +1,92 @@
+/// Globals
+* {
+  font-family: $sansation-font, $roboto-regular-font, $montserrat-semibold-font,
+    $lexant-zetta-regular-font, $roboto-light-font, $roboto-regular-font,
+    "Arial", "Helvetica", sans-serif;
+  box-sizing: border-box;
+  line-height: 1.6;
+  color: $primary-text-color;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100dvh;
+  width: 100%;
+  font-size: $font-size; // Base para rem units
+  scroll-behavior: smooth;
+}
+
+.body {
+  @include container-grid-layout;
+  min-height: 100dvh;
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
+
+  .main {
+    grid-area: main;
+    height: max-content;
+    width: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit; // Los enlaces toman el color del texto por defecto
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul ol {
+    list-style: none; // Elimina el estilo de lista predeterminado
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; // Elimina los espacios en blanco debajo de las imágenes
+  }
+
+  button {
+    font-family: inherit; // Asegura que los botones usen la misma fuente
+    cursor: pointer;
+  }
+}
+
+// a {
+//   text-decoration: none;
+//   color: inherit; // Los enlaces toman el color del texto por defecto
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
+
+// ul ol {
+//   list-style: none; // Elimina el estilo de lista predeterminado
+// }
+
+// img {
+//   max-width: 100%;
+//   height: auto;
+//   display: block; // Elimina los espacios en blanco debajo de las imágenes
+// }
+
+// button {
+//   font-family: inherit; // Asegura que los botones usen la misma fuente
+//   cursor: pointer;
+// }
+/// End Code

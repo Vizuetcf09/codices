@@ -1,0 +1,8 @@
+@mixin animated-background-image {
+  // @include background-image;
+  height: 200vh; /* Doble del viewport para notar el scroll */
+  width: auto;
+
+  /* Animación basada en scroll */
+  background-size: calc(auto + 20vh); /* Aumenta el tamaño progresivamente */
+}

@@ -1,0 +1,28 @@
+@mixin background-linear-gradient {
+  background: linear-gradient(
+    100deg,
+    $gradient-start-color 43%,
+    $gradient-end-color 100%
+  );
+}
+
+@mixin background-image-radial-gradient {
+  background: url("/images/bg-image.svg"),
+    radial-gradient(
+      circle at center,
+      $gradient-start-color 0%,
+      $gradient-center-color 20%,
+      $gradient-end-color 100%
+    );
+}
+
+@mixin text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+$text-gradient-color: linear-gradient(
+  to right,
+  $gradient-start-color,
+  $gradient-end-color
+);

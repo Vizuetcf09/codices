@@ -1,0 +1,197 @@
+///
+/// Hero
+///
+// Hero
+.hero-container {
+  @include container-grid;
+  @include row;
+
+  @include background-image;
+
+  width: 100%;
+  max-width: 100rem;
+  height: 100%;
+  display: flex;
+  padding: 3rem;
+  gap: 1rem;
+
+  .hero-main {
+    @include col(8);
+
+    flex: 1 1 0;
+    padding: 1rem 0 1rem 0;
+    align-self: stretch;
+    display: inline-flex;
+    align-content: center;
+    flex-direction: column;
+    gap: 3.125rem;
+
+    .hero-title {
+      flex: 1 1 0;
+      font-size: 8rem;
+      font-family: $montserrat-semibold-font;
+      font-weight: 600;
+      letter-spacing: 0.5rem;
+
+      br {
+        display: none;
+      }
+    }
+
+    .hero-description {
+      @include col(4);
+
+      height: 11rem;
+      display: contents;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 0.75rem;
+      font-family: $roboto-regular-font;
+      font-weight: normal;
+
+      .hero-description-text {
+        width: 100%;
+        font-size: 2rem;
+
+        .hero-description-text-light {
+          font-family: $roboto-light-font;
+          font-weight: 300;
+        }
+
+        .hero-description-text-medium {
+          font-family: $roboto-medium-font;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.hero-nav-links-container {
+  @include col(4);
+
+  width: auto;
+  padding: 1.5rem 0 1rem 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  word-wrap: break-word;
+
+  .hero-nav-link {
+    font-size: 2rem;
+    font-family: $lexant-zetta-regular-font;
+    font-weight: normal;
+    word-wrap: normal;
+  }
+}
+
+///
+/// Responsive displays
+///
+// Responsive displays
+@include responsive-display($w-lg) {
+  .hero-container {
+    padding: 2rem;
+  }
+
+  .hero-main {
+    @include col(12);
+    gap: 2rem;
+  }
+
+  .hero-nav-links-container {
+    @include col(12);
+
+    width: 100%;
+    padding: 0.75rem 0 0.75rem 0;
+    flex-direction: collumn;
+    gap: 3.5rem; // Espaciado ajustado
+    justify-content: flex-end; // Centra los elementos horizontalmente
+    align-items: flex-end; // Opcional: Ajusta la alineación vertical si necesario
+    word-wrap: normal;
+    gap: 1rem;
+  }
+
+  .about-container {
+    padding: 2rem;
+  }
+}
+
+@include responsive-display($w-md) {
+  .hero-container {
+    padding: 1.5rem;
+
+    .hero-main {
+      @include col(12);
+      gap: 0.75rem;
+
+      .hero-title {
+        font-size: 7.25rem;
+        line-height: normal;
+
+        br {
+          display: inline;
+        }
+      }
+
+      .hero-description {
+        @include col(12);
+
+        display: contents;
+        height: 150px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@include responsive-display($w-sm) {
+  .hero-container {
+    padding: 0.75rem;
+
+    .hero-main {
+      @include col(12);
+
+      display: flex;
+      gap: 2.25rem;
+
+      .hero-title {
+        font-size: 7.125rem;
+        line-height: normal;
+
+        br {
+          display: inline;
+        }
+      }
+
+      .hero-description {
+        @include col(12);
+
+        display: contents;
+        height: 100%;
+
+        .hero-description-text {
+          height: 100%;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .hero-nav-links-container {
+      @include col(12);
+      padding: 0 1rem 0 0;
+      gap: 1.5rem;
+
+      .hero-nav-link {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+///
+/// End code
+///
+// End Code
