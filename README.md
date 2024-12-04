@@ -2,19 +2,19 @@
 
 ## What is Códices?
 
-Codices es un framework de código abierto desarrollado con el motor de CSS de
-Sass, su flexibilidad te permite desarrollar desde una UI hasta una librería o
-sistema de diseño de forma rápida y limpia, ya que puedes personalizar el código
-fuente con total libertad y de una forma muy intuitiva.
+Codices is an open-source framework developed with the CSS engine Sass. Its
+flexibility allows you to develop everything from a UI to a library or design
+system quickly and cleanly. You can customize the source code freely and
+intuitively.
 
-## Cómo funciona?
+## How does it work?
 
-Códices tiene una estructura de carpetas que contiene los elemento del framework
-por separado.
+Codices has a folder structure that contains the framework's elements
+separately.
 
 # Install Códices
 
-## Con npm
+## With npm
 
 ```bash
 npm install codices
@@ -28,7 +28,7 @@ pnpm install codices
 
 # Usage
 
-Copia el siguiente script `odices` en `package.json`, de la siguiente forma
+Copy the following script into `package.json` as shown below:
 
 ```javascript
 ...
@@ -41,14 +41,14 @@ Copia el siguiente script `odices` en `package.json`, de la siguiente forma
 ...
 ```
 
-Despues ejecuta el siguiente comando en la terminal:
+Then run the following command in the terminal:
 
 ```bash
 npm run codices
 ```
 
-Esto actualizará las scripts necesarias para el uso de Códices, en el archivo
-`package.json`.
+This will update the necessary scripts for using Codices in the `package.json`
+file:
 
 ```javascript
 ...
@@ -63,5 +63,5 @@ Esto actualizará las scripts necesarias para el uso de Códices, en el archivo
 ...
 ```
 
-Ademas creará una copia del codigo fuente en el lenguaje Sass, con el que podras
-empezar a trabajar.
+Additionally, it will create a copy of the source code in Sass, allowing you to
+start working with it

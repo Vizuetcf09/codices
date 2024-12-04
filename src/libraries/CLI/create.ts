@@ -9,11 +9,27 @@ import * as path from "path";
 import { Scripts } from "./types";
 import { newScriptsMap } from "./scripts";
 //
-const packageJsonPath = path.join(process.cwd(), "package.json");
 //
-// updatePac
-//
-export function updatePackageJson(newScriptsMap: Scripts): void {
+export function initAndUpdateProject(newScriptsMap: Scripts): void {
+  const projectName = process.argv[2] || "codices-project";
+  const projectPath = path.join(process.cwd(), projectName);
+  const packageJsonPath = path.join(projectPath, "package.json");
+  // const packageJsonPath = path.join(process.cwd(), "package.json");
+
+  const defaultPackageJson = {
+    name: projectName,
+    version: "1.0.0",
+    scripts: {},
+  };
+
+  if (!fs.existsSync(packageJsonPath)) {
+    fs.writeFileSync(
+      packageJsonPath,
+      JSON.stringify(defaultPackageJson, null, 2)
+    );
+    console.log(`\n📦 Created package.json`);
+  }
+
   fs.readFile("package.json", "utf8", (err, data) => {
     if (err) {
       console.error("Error reading package.json:\n", err);
@@ -32,7 +48,7 @@ export function updatePackageJson(newScriptsMap: Scripts): void {
           if (writeErr) {
             console.error("Error writing in package.json:\n", writeErr);
           } else {
-            console.log("Updated package.json");
+            console.log("✅ Updated package.json");
           }
         }
       );
@@ -40,11 +56,12 @@ export function updatePackageJson(newScriptsMap: Scripts): void {
       console.error("Error parsing package.json:\n", parseError);
     }
   });
+  console.log("\n✨ Project initialized and updated successfully!\n");
 }
 //
 // Use updatePackageJson
 //
-updatePackageJson(newScriptsMap);
+initAndUpdateProject(newScriptsMap);
 //
 // endcode
 //
