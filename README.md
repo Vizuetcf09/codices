@@ -20,12 +20,6 @@ separately.
 npm install codices
 ```
 
-## Con npm
-
-```bash
-pnpm install codices
-```
-
 # Usage
 
 Copy the following script into `package.json` as shown below:
