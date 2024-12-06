@@ -1,5 +1,13 @@
-@import "grid";
-@import "images";
+///
+/// import mixins
+///
+@import "animations";
+@import "containers";
 @import "display";
 @import "gradients";
-@import "animations";
+@import "grid";
+@import "images";
+@import "layout";
+///
+/// endcode
+///

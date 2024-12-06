@@ -1,12 +1,29 @@
-@mixin background-linear-gradient {
+///
+/// Gradients
+///
+/// Background gradients
+///
+/// Variables
+///
+/// Gradient colors
+///
+$gradient-start-color: rgba($color-lack 100) !default;
+$gradient-center-color: rgba($color-white, 60) !default;
+$gradient-end-color: $background-color !default;
+///
+/// Background gradient mixins
+///
+@mixin gradients-linear-background {
   background: linear-gradient(
     100deg,
     $gradient-start-color 43%,
     $gradient-end-color 100%
   );
 }
-
-@mixin background-image-radial-gradient {
+///
+/// Background gradient with image mixins
+///
+@mixin gradient-radial-background-w-image {
   background: url("/images/bg-image.svg"),
     radial-gradient(
       circle at center,
@@ -15,14 +32,19 @@
       $gradient-end-color 100%
     );
 }
-
+///
+/// Text Gradients mixins
+///
 @mixin text-gradient {
   -webkit-background-clip: text;
   background-clip: text;
 }
-
+///
 $text-gradient-color: linear-gradient(
   to right,
   $gradient-start-color,
   $gradient-end-color
 );
+///
+/// endcode
+///

@@ -1,0 +1,24 @@
+///
+///  Containers
+///
+/// Flex
+///
+@mixin container-flex {
+  display: flex;
+  max-width: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+///
+///  Grid
+///
+@mixin container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+///
+/// endcode
+///

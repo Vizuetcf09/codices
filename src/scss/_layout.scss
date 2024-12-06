@@ -1,4 +1,8 @@
-/// Globals
+///
+///  Globals
+///
+/// *
+///
 * {
   font-family: $sansation-font, $roboto-regular-font, $montserrat-semibold-font,
     $lexant-zetta-regular-font, $roboto-light-font, $roboto-regular-font,
@@ -9,14 +13,18 @@
   margin: 0;
   padding: 0;
 }
-
+///
+/// html
+///
 html {
   height: 100dvh;
   width: 100%;
   font-size: $font-size; // Base para rem units
   scroll-behavior: smooth;
 }
-
+///
+/// body
+///
 .body {
   @include container-grid-layout;
   min-height: 100dvh;
@@ -65,28 +73,6 @@ html {
     cursor: pointer;
   }
 }
-
-// a {
-//   text-decoration: none;
-//   color: inherit; // Los enlaces toman el color del texto por defecto
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-// }
-
-// ul ol {
-//   list-style: none; // Elimina el estilo de lista predeterminado
-// }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-//   display: block; // Elimina los espacios en blanco debajo de las imágenes
-// }
-
-// button {
-//   font-family: inherit; // Asegura que los botones usen la misma fuente
-//   cursor: pointer;
-// }
-/// End Code
+///
+/// endcode
+///
