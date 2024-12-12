@@ -1,9 +1,9 @@
 {
   "name": "create-codices",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "dist/index.js",
   "bin": {
-    "codices": "create-codices.mjs"
+    "codices": "node dist/index.js"
   },
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -28,6 +28,8 @@
   "description": "Códices, Sass Framework.",
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "enquirer": "^2.4.1",
+    "inquirer": "^12.2.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
   },

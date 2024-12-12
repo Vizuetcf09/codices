@@ -19,7 +19,7 @@ export type copyDirectoryTypes = (
 
 //
 //
-export interface introContext {
+export interface introContextTypes {
   skipWelcome: boolean;
   welcome?: string;
 }
