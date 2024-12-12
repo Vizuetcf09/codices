@@ -11,8 +11,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "outDir": "dist",
-    "rootDir": "src/libraries"
+    "rootDir": "libraries"
   },
-  "include": ["src/libraries", "src/scss"],
+  "include": ["libraries", "src/scss", "create-codices.ts"],
   "exclude": ["node_modules", "dist"]
 }

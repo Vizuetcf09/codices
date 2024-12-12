@@ -17,7 +17,13 @@ separately.
 ## With npm
 
 ```bash
-npm install codices
+npm create codices
+```
+
+## Whith npx
+
+```bash
+npx codices
 ```
 
 # Usage
