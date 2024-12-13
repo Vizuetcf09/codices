@@ -1,6 +1,6 @@
 {
   "name": "create-codices",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "dist/index.js",
   "bin": {
     "codices": "node dist/index.js"
