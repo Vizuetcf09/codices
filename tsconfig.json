@@ -18,6 +18,6 @@
       "@lib/*": ["lib/*"]
     }
   },
-  "include": ["lib", "src/scss", "create-codices.ts"],
+  "include": ["lib", "src/scss", "create-codices.ts", "lib/CLI/.ts"],
   "exclude": ["node_modules", "dist"]
 }

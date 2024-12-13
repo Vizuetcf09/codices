@@ -1,28 +1,8 @@
-//
-// start-code
-//
-// node
-//
 import { promises as fs } from "node:fs";
 import * as path from "path";
-//
-// Types
-//
+
 import { copyDirectoryTypes } from "./types";
-//
-// Types
-//
 
-/* 
-Crear las props para los tipos de datos de src y dest.
-
-export interface Props {}
-
-*/
-
-//
-// copyDirectory function
-//
 export const copyDirectory: copyDirectoryTypes = async (src, dest) => {
   await fs.mkdir(dest, { recursive: true });
 
@@ -50,9 +30,9 @@ const destDir = "./src/scss";
 // Use copuDirectory
 //
 copyDirectory(sourceDir, destDir)
-  .then(() => console.log("Directory copied successfully\n"))
+  .then(() => console.log("✅ Directory copied successfully"))
   .catch((err: Error | null) =>
-    console.error("Error copying directory:\n", err)
+    console.error("\n ❌Error copying directory:\n", err)
   );
 //
 // endcode

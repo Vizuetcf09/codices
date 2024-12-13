@@ -1,8 +1,3 @@
-// //
-// // Export SCSS Components
-// //
-// // Types
-// //
 // import { copyDirectoryTypes } from "./types";
 // //
 // /* Export SCSS Components

@@ -23,6 +23,22 @@ export interface introContextTypes {
   skipWelcome: boolean;
   welcome?: string;
 }
-//
-// endcode
-//
+
+export type project = {
+  name: string;
+  display: string;
+  variants: proyectVariant[];
+};
+
+export type proyectVariant = {
+  name: string;
+  display: string;
+  customCommand?: string;
+};
+
+export interface packageJsonInfoTypes {
+  version: string;
+  scripts: {
+    [key: string]: string; // Claves de scripts como strings y valores también strings
+  };
+}
