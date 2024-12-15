@@ -24,7 +24,7 @@ export const copyDirectory: copyDirectoryTypes = async (src, dest) => {
 //
 // sourceDir and destDir
 //
-const sourceDir = "node_modules/codices/src/scss";
+const sourceDir = "node_modules/create-codices/src/scss";
 const destDir = "./src/scss";
 //
 // Use copuDirectory
