@@ -2,4 +2,5 @@
 
 "use strict";
 
-import("./dist/index.js").then(({ main }) => main());
+import("./dist/index.js");
+// .then(({ main }) => main());

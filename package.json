@@ -1,6 +1,6 @@
 {
   "name": "create-codices",
-  "version": "0.2.3",
+  "version": "0.2.6",
   "main": "dist/index.js",
   "bin": {
     "codices": "node dist/index.js"
@@ -28,7 +28,6 @@
   "description": "Códices, Sass Framework.",
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "enquirer": "^2.4.1",
     "inquirer": "^12.2.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
@@ -39,5 +38,8 @@
     "README.md",
     "package-lock.json",
     "package.json"
-  ]
+  ],
+  "dependencies": {
+    "codices": "^0.2.2"
+  }
 }
