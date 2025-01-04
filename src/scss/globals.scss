@@ -1,15 +1,16 @@
 ///
 /// Códices
 ///
-@import "fonts/fonts";
-@import "variables/variables";
+@import "fonts";
+@import "variables";
+@import "functions/functions";
 @import "mixins/mixins.scss";
 ///
 /// Astro
 ///
 /// Layout
 ///
-@import "layout/Layout";
+@import "layouts/Layout";
 ///
 /// Components
 ///

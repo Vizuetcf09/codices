@@ -1,3 +1,21 @@
+///
+///  Container Flex
+///
+@mixin container-flex {
+  display: flex;
+  max-width: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+///
+///  Container Flex
+@mixin container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+  max-width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
 ///  Mixin para las filas
 ///
 @mixin row {
@@ -11,5 +29,18 @@
   grid-column: 0 0 percentage($columns / $grid-columns);
   max-width: percentage($columns / $grid-columns);
 }
-///  end-mixins
+///
+/// Grid conteiner
+///
+@mixin container-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 1fr 100px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+///
+///  End mixins
 ///
