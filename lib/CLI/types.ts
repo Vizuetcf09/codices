@@ -1,7 +1,3 @@
-// start-code
-//
-// Types
-//
 // Scripts types
 //
 export interface Scripts {
@@ -37,8 +33,5 @@ export type proyectVariant = {
 };
 
 export interface packageJsonInfoTypes {
-  version: string;
-  scripts: {
-    [key: string]: string; // Claves de scripts como strings y valores también strings
-  };
+  [key: string]: string; // Claves de scripts como strings y valores también strings
 }

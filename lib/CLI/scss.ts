@@ -30,7 +30,7 @@ const destDir = "./src/scss";
 // Use copuDirectory
 //
 copyDirectory(sourceDir, destDir)
-  .then(() => console.log("✅ Directory copied successfully"))
+  .then(() => console.log("✅ Directory 'scss' copied successfully"))
   .catch((err: Error | null) =>
     console.error("\n ❌Error copying directory:\n", err)
   );

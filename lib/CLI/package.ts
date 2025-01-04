@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { packageJsonInfoTypes } from "./types";
-import { packageJsonInfo, defaultPackageJson } from "./utils";
+import { defaultPackageJson, packageJsonInfo } from "./utils";
 
 export function updatePackageJson(packageJsonInfo: packageJsonInfoTypes) {
   const packageJsonPath = path.join(process.cwd(), "package.json");
